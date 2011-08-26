@@ -34,24 +34,25 @@ Setup step
 
 6. 依指示安裝Passenger所需的套件
 
-`# /usr/local/bin/passenger-install-apache2-module`
+    `# /usr/local/bin/passenger-install-apache2-module`
 
     *   你應該會看到下列的訊息
 
-         * Curl development headers with SSL support... not found
-         * Apache 2 development headers... not found
-         * Apache Portable Runtime (APR) development headers... not found
-         * Apache Portable Runtime Utility (APU) development headers... not found
+             * Curl development headers with SSL support... not found
+             * Apache 2 development headers... not found
+             * Apache Portable Runtime (APR) development headers... not found
+             * Apache Portable Runtime Utility (APU) development headers... not found
 
     *   所以安裝下面兩個要用到的套件
 
-`# apt-get install libcurl4-openssl-dev`
+    `# apt-get install libcurl4-openssl-dev`
 
-`# apt-get install apache2-prefork-dev`
+    `# apt-get install apache2-prefork-dev`
 
 7. 設定Passenger
 
-`# gem install passenger -v [版號]`     (預設用3.0.2, 不加-v現在是裝3.0.8)
+    `# gem install passenger -v [版號]`     (預設用3.0.2, 不加-v現在是裝3.0.8)
+
     *   將以下內容貼到/etc/apache2/mods-available/passenger.load    (此檔案要自己建立)
 
             LoadModule passenger_module /usr/local/lib/ruby/gems/1.8/gems/passenger-3.0.7/ext/apache2/mod_passenger.so
