@@ -4,11 +4,23 @@
 # 11.09.02	Det!C				v1.0
 
 installer() {
+	# ==Set alias==
 	checkAlias_ll=$(grep "alias ll='ls -alF'" ~/.bashrc)
 
 	if [ "$checkAlias_ll" = "" ]; then
 		echo "alias ll='ls -alF'" >> ~/.bashrc
 	fi
+
+	# ==Install locales==
+	cat /dev/null > /etc/default/locale
+	cat > /etc/locale.gen <<EOF
+en_US.UTF-8 UTF-8
+en_US ISO-8859-1
+zh_TW.UTF-8 UTF-8
+zh_TW BIG5
+EOF
+	/usr/sbin/locale-gen
+
 	apt-get update
 	apt-get upgrade -y
 	#apt-get install -y sudo make sharutils
@@ -83,14 +95,5 @@ fi
 	# Configure Timezone
 	#cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 
-	# Install locales
-	#cat /dev/null > /etc/default/locale
-	#cat > /etc/locale.gen <<EOF
-#en_US.UTF-8 UTF-8
-#en_US ISO-8859-1
-#zh_TW.UTF-8 UTF-8
-#zh_TW BIG5
-#EOF
-	#/usr/sbin/locale-gen
 
 #}
