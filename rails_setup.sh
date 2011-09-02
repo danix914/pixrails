@@ -21,6 +21,7 @@ zh_TW BIG5
 EOF
 	/usr/sbin/locale-gen
 
+	# ==Basic setup==
 	apt-get update
 	apt-get upgrade -y
 	apt-get install -y sudo make
@@ -52,14 +53,15 @@ EOF
 			wget \
 			xfsdump \
 			xfsprogs
-	 library
+
+	# ==library==
 	apt-get install -y \
 			libssl-dev \
 			libexpat-dev \
 			libmysqlclient-dev \
 			libxml2-dev
 
-	# 程式語言類
+	# ==程式語言類==
 	DEBIAN_FRONTEND=noninteractive apt-get install -y \
 			bash-completion \
 			build-essential \
@@ -117,9 +119,3 @@ if [ "$userentry" = "Y" ] || [ "$userentry" = "y" ] ; then
 else
 	echo "Interrupt!"
 fi
-#installer() {
-#alias lll='ls'
-
-
-
-#}
