@@ -5,6 +5,7 @@ Setup step
 
 * * *
 After execute the script file
+
 1. 安裝[Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/index.html)
 
         # wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise_1.8.7-2011.03_amd64_debian6.0.deb      (網址依系統決定)
