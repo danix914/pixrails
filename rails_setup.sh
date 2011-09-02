@@ -100,13 +100,13 @@ EOF
 	ln -sfn ~/github/dotvim/vimrc .vimrc
 
 	# ==Notice==
-	echo "接著你需要依照作業系統，下載Ruby Enterprise Edition並安裝，並做相對應設定\n"
-	echo "[ Example ]\n"
-	echo "	# wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise_1.8.7-2011.03_amd64_debian6.0.deb\n"
-	echo "	# dpkg -i ruby-enterprise_1.8.7-2011.03_amd64_debian6.0.deb\n"
-	echo "	# echo 'export PATH="/usr/local/lib/ruby/gems/1.8/bin:$PATH"' >> ~/.profile && . ~/.profile\n"
-	echo "\n完成後再設定Passenger，剩餘的部份請參考README.md\n"
-	echo "	# /usr/local/bin/passenger-install-apache2-module\n"
+	echo "\033[1;31m接著你需要依照作業系統，下載\033[4;47mRuby Enterprise Edition\033[0;1;31m並安裝，並做相對應設定\033[0m"
+	echo "[ Example ]"
+	echo "	# wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise_1.8.7-2011.03_amd64_debian6.0.deb"
+	echo "	# dpkg -i ruby-enterprise_1.8.7-2011.03_amd64_debian6.0.deb"
+	echo "	# echo 'export PATH="/usr/local/lib/ruby/gems/1.8/bin:\$PATH"' >> ~/.profile && . ~/.profile"
+	echo "\n\033[1;31m完成後再設定\033[4;47mPassenger\033[0;1;31m，剩餘的部份請參考\033[36mREADME.md\033[0m"
+	echo "	# /usr/local/bin/passenger-install-apache2-module"
 
 }
 
