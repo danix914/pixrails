@@ -1,7 +1,7 @@
 Setup step
-    # git clone git://github.com/danix914/pixrails.git
-    # cd pixrails
-    # ./rails_setup.sh  (run as administrator)
+        # git clone git://github.com/danix914/pixrails.git
+        # cd pixrails
+        # ./rails_setup.sh  (run as administrator)
 
 * * *
 After execute the script file
