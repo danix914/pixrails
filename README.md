@@ -13,22 +13,9 @@ After execute the script file
         # dpkg -i ruby-enterprise_1.8.7-2011.03_amd64_debian6.0.deb
         # echo 'export PATH="/usr/local/lib/ruby/gems/1.8/bin:$PATH"' >> ~/.profile && . ~/.profile
 
-2. 依指示安裝Passenger所需的套件
+2. 安裝Passenger的apache module
 
     `# /usr/local/bin/passenger-install-apache2-module`
-
-    *   你應該會看到下列的訊息
-
-             * Curl development headers with SSL support... not found
-             * Apache 2 development headers... not found
-             * Apache Portable Runtime (APR) development headers... not found
-             * Apache Portable Runtime Utility (APU) development headers... not found
-
-    *   所以安裝下面兩個要用到的套件
-
-    `# apt-get install libcurl4-openssl-dev`
-
-    `# apt-get install apache2-prefork-dev`
 
 3. 設定Passenger
 
